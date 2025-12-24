@@ -1,94 +1,60 @@
-# Project Management System (Salesforce Flow Automation)
+# 🌀 Project Management System – Salesforce Flow Automation
 
-## Project Description
+##  Project Overview
+The **Project Management System** is a Salesforce-based solution designed to automate the creation of projects and their associated tasks. By leveraging **Salesforce Flows** and **Custom Objects**, this system eliminates manual inconsistencies and streamlines complex task assignments through a reusable **Template-Based Architecture**.
 
-Managing multiple projects simultaneously in a dynamic organization can be challenging. Manual creation of projects, task assignments, and maintaining standard workflows often leads to inconsistency, delays, and data duplication.
+<img width="1905" height="866" alt="01_app_home" src="https://github.com/user-attachments/assets/c1720aa1-1736-4e47-bfe8-64b9770355c0" />
 
-The **Project Management System** is a Salesforce-based solution that automates project creation and task management using **Salesforce Flows**, **Custom Objects**, and **Record Templates**. It reduces repetitive manual work, ensures consistent execution, and enhances productivity.
+*Figure 1: Main interface showing the Screen Flow launcher and performance dashboard.*
 
----
+##  Tech Stack
+* **Platform:** Salesforce CRM
+* **Automation:** Salesforce Flows (Screen Flows, Looping Logic, Collection Variables)
+* **Database:** Custom Salesforce Objects
+* **Security:** Custom Permission Sets & Profiles
 
-## Problem Statement
+##  The Problem
+Organizations managing multiple projects simultaneously often face:
+* **Manual Complexity:** Time-consuming manual creation of project structures and tasks.
+* **Inconsistency:** Lack of standardization across teams leading to execution delays.
+* **Data Duplication:** Manual entries often result in redundant or inconsistent data.
+* **Security Risks:** Unauthorized access to sensitive project templates or automation.
 
-* Organizations face difficulties in managing multiple projects simultaneously.
-* Manual task creation and assignment are time-consuming and error-prone.
-* Lack of standardized project templates leads to inconsistencies across teams.
+##  The Solution
+<img width="676" height="1024" alt="Your paragraph text" src="https://github.com/user-attachments/assets/84a5ecd2-e6ba-4e10-b340-9c93b2bb6541"/>
 
----
+*Figure 2: Architectural overview of the automated flow logic and decision-making process.*
 
-## Proposed Solution
+A digital-first, automated system built on Salesforce:
+* **Template-Based Reusability:** Create reusable blueprints for projects and task sets.
+* **Intelligent Looping:** A flow engine that automatically clones Task Templates into live Project Tasks.
+* **Bulk Data Processing:** Utilizes **Collection Variables** and **Assignments** for efficient record creation.
+* **Granular Security:** **Permission Sets** ensure only authorized users can trigger or modify templates.
 
-* **Template-Based Project Creation:** Create reusable project templates with predefined tasks.
-* **Automated Task Assignment:** Automatically generate tasks under a project using Salesforce Flows.
-* **Controlled Access:** Use Permission Sets to allow only authorized users to execute flows and access project templates.
-* **Scalability:** Easily create multiple projects from a template without repeating manual steps.
+##  System Workflow
+1. **Selection:** User triggers the flow and selects a predefined **Project Template**.
+2. **Execution:** The flow creates a new **Project__c** record and fetches associated **Task Templates**.
+3. **Logic:** The system loops through templates, assigning specific values to a task collection.
+4. **Validation:** Built-in debug validation ensures all records are created accurately.
+5. **Finalization:** The flow performs a bulk insert, populating the new project with all necessary tasks.
 
----
-
-## Objects Used
-
-| Object                           | Description                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------------- |
-| **Project__c**                   | Main project record, containing project name, owner, deadline, status, and description. |
-| **Project_Template__c**          | Stores reusable templates for projects, including default tasks.                        |
-| **Task_Template__c**             | Defines standard tasks for project templates, including subject, status, and priority.  |
-| **Project_Task__c**              | Represents tasks created under a specific project from templates.                       |
-| **Flow Variables & Collections** | Used in Flows for loops, assignments, and bulk record creation.                         |
-| **Permission Set**               | Controls which users can access, edit, or execute flows and templates.                  |
-
----
-
-## System Workflow
-
-1. User selects a **Project Template** or chooses to create a blank project.
-2. Flow triggers to create a new **Project** record.
-3. If using a template, associated **Task Templates** are cloned as **Project Tasks**.
-4. Flow handles looping, assignments, and bulk creation for all tasks.
-5. **Permission Sets** ensure only authorized users can manage templates and trigger flows.
-
----
-
-## Key Features
-
-* **Automated Project & Task Creation** using Salesforce Flows.
-* **Template-Based Reusability** for quick project setup.
-* **Permission-Controlled Access** for secure workflow execution.
-* **Scalable and Consistent Project Management** across teams.
-
----
-
-## Future Enhancements
-
-* Add **task dependencies** and progress tracking.
-* Integrate **email notifications** for task assignments.
-* Implement **dashboards** for project overview and analytics.
-
----
-
-## Tech Stack
-
-* **Platform:** Salesforce
-* **Automation:** Salesforce Flows
-* **Objects:** Custom Salesforce Objects (Project, Project Template, Task Template, Project Task)
-* **Access Control:** Permission Sets
-
----
-
-## How to Use
-
-1. Open the **Project Management App** in Salesforce.
-2. Click **Create New Project**.
-3. Select **Blank Project** or **Template Project**.
-4. If using a template, choose the desired template and account.
-5. The Flow will automatically create the project and all associated tasks.
-6. Monitor tasks and project progress using standard Salesforce views and reports.
-
----
-
-## Documentation
-
-For full project documentation including **screenshots of flows, objects, and permission sets**, see the **Documentation folder**:
-https://docs.google.com/document/d/1rcHchNW2-11AIRQ79B7q-7Lo-HLY0NhsieJ61O7e504/edit?usp=sharing
+<img width="1563" height="422" alt="14_permission_set(1)" src="https://github.com/user-attachments/assets/6bb4c14b-78aa-4802-a23b-fe45c2d45536"/>
+<img width="883" height="296" alt="15_permission_set(2)" src="https://github.com/user-attachments/assets/d556b1dc-3d36-4d47-a897-9ba49c85aed8" />
 
 
+*Figure 3: Security model enforcing role-based access for projects and templates.*
 
+##  Key Metrics & Impact
+* **Efficiency:** Significantly reduces manual work by automating task generation.
+* **Consistency:** Ensures every project follows a standardized departmental workflow.
+* **Scalability:** Capable of handling an increasing number of projects without added manual effort.
+* **Data Accuracy:** Minimizes human error during task assignment and data entry.
+
+##  Future Enhancements
+* **Dependencies:** Adding task dependencies and automated progress tracking.
+* **Notifications:** Integrating email alerts for real-time task assignments.
+* **Dashboards:** Advanced analytics dashboards for multi-project overviews.
+
+##  Documentation
+For the full technical breakdown, including detailed object fields and debug logs, please refer to the complete documentation:
+🔗 [**Project Documentation (Google Drive)**](https://docs.google.com/document/d/1rcHchNW2-11AIRQ79B7q-7Lo-HLY0NhsieJ61O7e504/edit?usp=sharing)
