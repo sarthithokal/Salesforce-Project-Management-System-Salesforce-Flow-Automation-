@@ -57,4 +57,4 @@ A digital-first, automated system built on Salesforce:
 
 ##  Documentation
 For the full technical breakdown, including detailed object fields and debug logs, please refer to the complete documentation:
-🔗 [**Project Documentation (Google Drive)**](https://docs.google.com/document/d/1rcHchNW2-11AIRQ79B7q-7Lo-HLY0NhsieJ61O7e504/edit?usp=sharing)
+🔗 [**Project Documentation (Google Drive)**](https://drive.google.com/file/d/1MvB1z2VHo7M1RGWztm890-UnwmtPhIvE/view?usp=sharing)
