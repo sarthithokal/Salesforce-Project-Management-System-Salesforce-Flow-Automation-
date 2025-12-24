@@ -1,4 +1,4 @@
-# 🌀 Project Management System – Salesforce Flow Automation
+# Project Management System – Salesforce Flow Automation
 
 ##  Project Overview
 The **Project Management System** is a Salesforce-based solution designed to automate the creation of projects and their associated tasks. By leveraging **Salesforce Flows** and **Custom Objects**, this system eliminates manual inconsistencies and streamlines complex task assignments through a reusable **Template-Based Architecture**.
